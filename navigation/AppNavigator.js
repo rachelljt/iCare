@@ -3,12 +3,12 @@ import { createAppContainer } from "react-navigation";
 
 import StartScreen from "../screens/StartScreen";
 import PushNotificationScreen from "../screens/PushNotificationScreen";
-import OtherScreen from "../screens/OtherScreen";
+import EyeExerciseScreen from "../screens/EyeExerciseScreen";
 
 const AppNavigator = createStackNavigator({
   StartPage: StartScreen,
   PushNotificationPage: PushNotificationScreen,
-  OtherPage: OtherScreen,
+  EyeExercisePage: EyeExerciseScreen,
 });
 
 export default createAppContainer(AppNavigator);
