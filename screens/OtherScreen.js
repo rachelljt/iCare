@@ -1,8 +1,8 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 
 const OtherScreen = (props) => {
-  return <View></View>;
+  return <View><Text>hello</Text></View>;
 };
 
 export default OtherScreen;
