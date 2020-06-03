@@ -6,16 +6,21 @@ import Colors from "../constants/colors";
 const Header = (props) => {
   return (
     <View style={{ ...styles.header, ...props.style }}>
-      <Text style={props.headerTitle}>{props.title}</Text>
+      <Text style={styles.headerTitle}>{props.title}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   header: {
-    width: "80%",
+    width: "100%",
     backgroundColor: Colors.primary,
-    margin: 40,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  headerTitle: {
+    fontSize: 23,
+    color: "white",
   },
 });
 
