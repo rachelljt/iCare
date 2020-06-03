@@ -1,12 +1,10 @@
 {
   "expo": {
-    "name": "rn-hackathon",
-    "slug": "rn-hackathon",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "name": "iCare",
+    "slug": "iCare",
+    "description": "eye therapy app ",
+    "privacy": "public",
+    "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,11 +16,13 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.codeexphackathon.iCare",
+      "versionCode": 1
     }
   }
 }

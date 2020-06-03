@@ -2,18 +2,21 @@ import React from "react";
 import { View, StyleSheet, Text, Image, ScrollView } from "react-native";
 
 import Header from "../components/Header";
+import Colors from "../constants/colors";
 
 const EyeExerciseScreen = (props) => {
   return (
     <View>
-      <ScrollView>
+      <ScrollView style={styles.screen}>
         <Header
           title="RELAX and REFRESH your eyes with 9 simple steps!"
           style={styles.header}
           headerTitle={styles.headerTitle}
         />
-        <View style={styles.container}>
-          <Text>1</Text>
+        <View style={styles.mainContainer}>
+          <View style={styles.container}>
+            <Text>1</Text>
+          </View>
           <View style={styles.imageTextContainer}>
             <Image
               style={styles.image}
@@ -30,7 +33,9 @@ const EyeExerciseScreen = (props) => {
               <Text style={styles.text}>Blink your eyes for a few seconds</Text>
             </View>
           </View>
-          <Text>2</Text>
+          <View style={styles.container}>
+            <Text>2</Text>
+          </View>
           <View style={styles.imageTextContainer}>
             <Image
               style={styles.image}
@@ -47,7 +52,9 @@ const EyeExerciseScreen = (props) => {
               <Text style={styles.text}>Blink your eyes</Text>
             </View>
           </View>
-          <Text>3</Text>
+          <View style={styles.container}>
+            <Text>3</Text>
+          </View>
           <View style={styles.imageTextContainer}>
             <Image
               style={styles.image}
@@ -64,7 +71,9 @@ const EyeExerciseScreen = (props) => {
               <Text style={styles.text}>Blink your eyes</Text>
             </View>
           </View>
-          <Text>4</Text>
+          <View style={styles.container}>
+            <Text>4</Text>
+          </View>
           <View style={styles.imageTextContainer}>
             <Image
               style={styles.image}
@@ -81,6 +90,8 @@ const EyeExerciseScreen = (props) => {
               <Text style={styles.text}>Blink your eyes</Text>
             </View>
           </View>
+        </View>
+        <View style={styles.container}>
           <Text>5</Text>
           <View style={styles.imageTextContainer}>
             <Image
@@ -94,7 +105,9 @@ const EyeExerciseScreen = (props) => {
               <Text style={styles.text}>Blink your eyes</Text>
             </View>
           </View>
-          <Text>6</Text>
+          <View style={styles.container}>
+            <Text>6</Text>
+          </View>
           <View style={styles.imageTextContainer}>
             <Image
               style={styles.image}
@@ -107,7 +120,10 @@ const EyeExerciseScreen = (props) => {
               <Text style={styles.text}>Blink your eyes</Text>
             </View>
           </View>
-          <Text>7</Text>
+
+          <View style={styles.container}>
+            <Text>7</Text>
+          </View>
           <View style={styles.imageTextContainer}>
             <Image
               style={styles.image}
@@ -125,7 +141,10 @@ const EyeExerciseScreen = (props) => {
               <Text style={styles.text}>Blink your eyes</Text>
             </View>
           </View>
-          <Text>8</Text>
+
+          <View style={styles.container}>
+            <Text>8</Text>
+          </View>
           <View style={styles.imageTextContainer}>
             <Image
               style={styles.image}
@@ -138,7 +157,9 @@ const EyeExerciseScreen = (props) => {
               <Text style={styles.text}>Hold for 5 seconds, then relax</Text>
             </View>
           </View>
-          <Text>9</Text>
+          <View style={styles.container}>
+            <Text>9</Text>
+          </View>
           <View style={styles.imageTextContainer}>
             <Image
               style={styles.image}
@@ -151,28 +172,50 @@ const EyeExerciseScreen = (props) => {
               <Text style={styles.text}>Blink your eyes</Text>
             </View>
           </View>
+          <Text></Text>
+          <Text></Text>
         </View>
       </ScrollView>
     </View>
   );
 };
 
+EyeExerciseScreen.navigationOptions = {
+  headerTitle: "Eye Exercises",
+};
+
 const styles = StyleSheet.create({
+  screen: {
+    backgroundColor: "white",
+  },
   header: {
     height: 80,
+    backgroundColor: Colors.accent,
   },
   headerTitle: {
     fontSize: 20,
     color: "white",
     textAlign: "center",
-    marginVertical: 15,
+    margin: 15,
   },
-  container: {},
+  mainContainer: {},
+  container: {
+    textAlign: "right",
+  },
   imageTextContainer: {
-    flexDirection: "row",
-    marginVertical: 15,
+    margin: 3,
+    alignItems: "center",
   },
-  image: {},
+  image: {
+    height: 100,
+    width: 200,
+    marginBottom: 15,
+  },
+  textContainer: {
+    backgroundColor: Colors.primary,
+    width: "85%",
+    borderRadius: 20,
+  },
   text: {
     textAlign: "center",
   },

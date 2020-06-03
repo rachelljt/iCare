@@ -13,9 +13,9 @@ const Header = (props) => {
 
 const styles = StyleSheet.create({
   header: {
-    width: "80%",
     backgroundColor: Colors.primary,
-    margin: 40,
+    marginTop: 25,
+    width: "100%",
   },
 });
 
