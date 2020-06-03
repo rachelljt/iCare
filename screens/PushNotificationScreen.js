@@ -3,7 +3,10 @@ import { View, Text, Picker, StyleSheet } from "react-native";
 
 import Colors from "../constants/colors";
 
+import Notif from '../app/Notif'
+
 const PushNotificationScreen = (props) => {
+<<<<<<< HEAD
   const [state, setState] = useState(1);
   return (
     <View style={styles.container}>
@@ -27,6 +30,9 @@ const PushNotificationScreen = (props) => {
 
 PushNotificationScreen.navigationOptions = {
   headerTitle: "Push Notifications",
+=======
+  return <Notif />;
+>>>>>>> master
 };
 
 const styles = StyleSheet.create({
