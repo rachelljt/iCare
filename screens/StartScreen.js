@@ -14,12 +14,12 @@ const StartScreen = (props) => {
     <View>
       <ImageBackground
         style={styles.background}
-        source={require("../assets/dummyBackground.png")}
+        source={require("../assets/background3.png")}
       >
         <View style={styles.container}>
           <Image
             style={styles.appLogo}
-            source={require("../assets/dummyImage.png")}
+            source={require("../assets/appLogo2.png")}
           />
           <View style={styles.overallButtonContainer}>
             <View style={styles.buttonContainer}>
@@ -33,7 +33,7 @@ const StartScreen = (props) => {
               >
                 <Image
                   style={styles.icon}
-                  source={require("../assets/dummyImage.png")}
+                  source={require("../assets/notification.png")}
                 />
                 <Text style={styles.text}>NOTIFICATIONS</Text>
               </TouchableOpacity>
@@ -47,25 +47,38 @@ const StartScreen = (props) => {
               >
                 <Image
                   style={styles.icon}
-                  source={require("../assets/dummyImage.png")}
+                  source={require("../assets/eye.png")}
                 />
                 <Text style={styles.text}>EYE EXERCISES</Text>
               </TouchableOpacity>
             </View>
             <View style={styles.buttonContainer}>
-              <TouchableOpacity style={styles.button} onPress={() => {}}>
+              <TouchableOpacity
+                style={styles.button}
+                onPress={() => {
+                  props.navigation.navigate({ routeName: "RecipePage" });
+                }}
+              >
                 <Image
                   style={styles.icon}
-                  source={require("../assets/dummyImage.png")}
+                  source={require("../assets/recipes.png")}
                 />
-                <Text style={styles.text}>FEATURE3</Text>
+                <Text style={styles.text}>RECIPES</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.button} onPress={() => {}}>
+              <TouchableOpacity
+                style={styles.button}
+                onPress={() => {
+                  props.navigation.navigate({
+                    routeName: "CausesAndPreventionPage",
+                  });
+                }}
+              >
                 <Image
                   style={styles.icon}
-                  source={require("../assets/dummyImage.png")}
+                  source={require("../assets/bulb.png")}
                 />
-                <Text style={styles.text}>FEATURE4</Text>
+                <Text style={styles.text}>CAUSES & QUICK TIPS</Text>
+                <Text style={styles.text}>USEFUL LINKS</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -75,10 +88,14 @@ const StartScreen = (props) => {
   );
 };
 
+StartScreen.navigationOptions = {
+  headerTitle: "Home",
+};
+
 const styles = StyleSheet.create({
   background: {
     width: "100%",
-    height: 900,
+    height: "120%",
   },
   container: {
     justifyContent: "center",
@@ -86,8 +103,8 @@ const styles = StyleSheet.create({
     paddingVertical: 60,
   },
   appLogo: {
-    height: 250,
-    width: 250,
+    resizeMode: "stretch",
+    marginTop: 40,
   },
   icon: {
     height: "80%",
@@ -97,6 +114,7 @@ const styles = StyleSheet.create({
   },
   overallButtonContainer: {
     justifyContent: "space-evenly",
+    marginTop: 25,
   },
   buttonContainer: {
     flexDirection: "row",
@@ -110,6 +128,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 18,
+    textAlign: "center",
   },
 });
 
